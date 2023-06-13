@@ -6,7 +6,7 @@ const app = express();
 app.use(express.urlencoded({ extended: true }));
 
 app.engine('ejs', require('ejs').__express);
-app.set('views', __dirname + '/views');
+app.set('views', __dirname + '/docs');
 app.set('view engine', 'ejs');
 app.use(express.static('public'));
 
