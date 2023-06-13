@@ -14,7 +14,7 @@ app.use(express.static('public'));
 
 
 app.get('/', (req, res) => {
-  res.render('hello.ejs', { weather: null });
+  res.render('index.ejs', { weather: null });
 });
 
 app.post('/weather', (req, res) => {
@@ -33,7 +33,7 @@ app.post('/weather', (req, res) => {
         weather: body.weather[0].main,
         temperature: body.main.temp,
       };
-      res.render('hello.ejs', { weather });
+      res.render('index.ejs', { weather });
     } else {
       res.render('error.ejs');
     }
